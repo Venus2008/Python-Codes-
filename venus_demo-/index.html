@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud operations </title>
+    <!-- ------custom css ------->
+    <link rel="stylesheet" href="style.css">
+    <!-- ---------icon link ----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+
+<body>
+
+    <h1> -------> Crud Operations <------- </h1>
+            <!-- ------------search section ---------------- -->
+            <div class="searchdiv">
+                <input type="search" placeholder="Enter for search" class="search" id="search" onkeydown="searchdata()">
+            </div>
+            <div class="Ascending">
+                <button class="btn-10" id="convert" onclick="sortName()">Ascending</button>
+                <button class="btn-10" onclick="reset()">Reset</button>
+            </div>
+
+            <!-- ------------------main section--------------------- -->
+            <div class="main">
+                <!-- ------------------User input  section--------------------- -->
+                <div class="userinput">
+                    <h3 style="color: rgb(253, 15, 15);" id="demo"></h3>
+                    <h3 style="color: rgb(0, 238, 32);" id="demo-1"></h3>
+                    <form action="" id="form">
+                        <table class="userinputtable">
+                            <h2 id="harsh"></h2>
+                            <tr>
+                                <th><label>Name</label></th>
+                                <th><input type="text" id="name" placeholder="Enter a Name" required> </th>
+                            </tr>
+                            <tr>
+                                <th><label>Email</label></th>
+                                <th><input type="email" placeholder="Enter a Email" id="email" required></th>
+                            </tr>
+                            <tr>
+                                <th>Gender</th>
+                                <th>
+                                    <input type="radio" id="gender" name="Gender" value="Male">Male
+                                    <input type="radio" name="Gender" id="female" value="Female">Female
+                                    <br>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> <label>Hobby</label></th>
+                                <th> <input type="checkbox" value="Reading" id="Hobby" name="Hobby">
+                                    Reading
+                                    <input type="checkbox" value="Traveling" id="Hobby" name="Hobby">
+                                    Traveling
+                                    <input type="checkbox" value="Sports" id="Hobby" name="Hobby">
+                                    Sports
+                                    <br>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="Country">Country</label>
+                                </th>
+                                <th>
+                                    <select id="Country">
+                                        <option value="Select" disabled aria-readonly="true">Select</option>
+                                        <option value="IND">IND</option>
+                                        <option value="UK">UK</option>
+                                    </select>
+                                    <br>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="State">State</label>
+                                </th>
+                                <th>
+                                    <select id="State">
+                                        <option value="Select" disabled>Select</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="UP">UP</option>
+                                        <option value="MP">MP</option>
+                                    </select>
+                                    <br>
+                                </th>
+                            </tr>
+                            <th>
+                                <label for="City">City</label>
+                            </th>
+                            <th>
+                                <select id="City">
+                                    <option value="Select" disabled>Select</option>
+                                    <option value="Navsari">Navsari </option>
+                                    <option value="Surat">Surat</option>
+                                </select>
+                                <br>
+                            </th>
+                            </tr>
+                            <tr>
+                                <th><label>Action</label></th>
+                                <th>
+                                    <button type="submit" class="btn-1" id="submitbtn"
+                                        onclick="createUser()">Submit</button>
+                                    <button type="reset" class="btn-1 btn" id="cancelbtn" style="display: none;"
+                                        onclick="canceldata()">Cancel</button>
+                                </th>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <!-- ------------------User Data show   section--------------------- -->
+                <div class="userdata">
+                    <table id="userdatatable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Hobby</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <th>City</th>
+                                <th>Delete</th>
+                                <th>Modify</th>
+                            </tr>
+                            
+
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- ------custom js link ----->
+            <script src="script.js"></script>
+</body>
+
+</html>
